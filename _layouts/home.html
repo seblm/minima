@@ -37,7 +37,9 @@ layout: base
           </a>
         </h3>
         {%- if site.minima.show_excerpts -%}
-          {{ post.excerpt }}
+          {%- unless post.noExcerpt -%}
+            {{ post.excerpt }}
+          {%- endunless -%}
         {%- endif -%}
       </li>
       {%- endfor -%}
