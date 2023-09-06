@@ -30,6 +30,9 @@ layout: base
       </div>
       {%- endif %}
     </div>
+    {%- if page.img_large -%}
+      <img src="/img/{{ page.img_large }}" alt="Illustration de la publication {{ page.title | escape }}">
+    {%- endif -%}
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
